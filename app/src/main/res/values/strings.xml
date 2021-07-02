@@ -9,4 +9,9 @@
     <string name="create_account">Create new account</string>
 
     <string name="empty_field">Empty</string>
+    
+    <string name="vocabulary">Vocabulary</string>
+    <string name="learn">Learn</string>
+    <string name="workouts">Workouts</string>
+    <string name="account">Account</string>
 </resources>

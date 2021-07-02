@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item
+        android:id="@+id/accountFragment"
+        android:orderInCategory="1"
+        android:title="@string/learn"
+        android:icon="@drawable/ic_baseline_login_24"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mainFragment"
+        android:orderInCategory="2"
+        android:title="@string/workouts"
+        android:icon="@drawable/ic_round_home_24"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/settingsFragment"
+        android:orderInCategory="2"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/vocabulary"
+        app:showAsAction="ifRoom" />-->
+    <item
+        android:id="@+id/accountFragment"
+        android:orderInCategory="2"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/account"
+        app:showAsAction="ifRoom" />
+</menu>
