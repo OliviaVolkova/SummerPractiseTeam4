@@ -50,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
             var message = when{
                 passFromBase == null -> "User not found"
                 password == passFromBase -> {
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, BottomSingleActivity::class.java)
                     intent.putExtra("EXTRA_EMAIL", email)
                     intent.putExtra("EXTRA_PASS", password)
                     startActivity(intent)
