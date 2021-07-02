@@ -1,5 +1,6 @@
 package com.itis.englishgram.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -9,6 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
+import com.itis.englishgram.BottomSingleActivity
+import com.itis.englishgram.LoginActivity
 import com.itis.englishgram.R
 import com.itis.englishgram.extensions.hideKeyboard
 
@@ -21,7 +24,7 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
     private var etPassword: EditText? = null
     private var tiPassword: TextInputLayout? = null
     private var btnLogin: Button? = null
-    //private var btnSettings: Button? = null
+    private var btnRegister: Button? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -53,7 +56,10 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
             var message = when{
                 passFromBase == null -> "User not found"
                 password == passFromBase -> {
-                    //findNavController().navigate(R.id.action_loginFragment_to_mainFragment, MainFragment.createBundle(email, password))
+                    /*val intent = Intent(this, LoginActivity::class.java)
+                    intent.putExtra("EXTRA_EMAIL", email)
+                    intent.putExtra("EXTRA_PASS", password)
+                    startActivity(intent)*/
                     "Nice"
                 }
                 else -> "Correct password: $passFromBase"
@@ -62,9 +68,9 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
             showMessage(message)
         }
 
-        //btnSettings?.setOnClickListener{
-        //    findNavController().navigate(R.id.action_loginFragment_to_settingsFragment)
-        //}
+        btnRegister?.setOnClickListener{
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        }
 
         etEmail?.addTextChangedListener {
             tiEmail?.isErrorEnabled = false
@@ -95,6 +101,6 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
         etPassword = view.findViewById(R.id.et_password)
         tiPassword = view.findViewById(R.id.ti_password)
         btnLogin = view.findViewById(R.id.btn_login)
-        //btnSettings = view.findViewById(R.id.btn_settings)
+        btnRegister = view.findViewById(R.id.btn_register)
     }
 }
