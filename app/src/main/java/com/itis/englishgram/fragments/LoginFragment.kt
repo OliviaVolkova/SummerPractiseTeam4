@@ -56,10 +56,10 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
             var message = when{
                 passFromBase == null -> "User not found"
                 password == passFromBase -> {
-                    /*val intent = Intent(this, LoginActivity::class.java)
+                    val intent = Intent(activity, BottomSingleActivity::class.java) //mb broken
                     intent.putExtra("EXTRA_EMAIL", email)
                     intent.putExtra("EXTRA_PASS", password)
-                    startActivity(intent)*/
+                    startActivity(intent)
                     "Nice"
                 }
                 else -> "Correct password: $passFromBase"
