@@ -10,4 +10,31 @@
         android:name="com.itis.englishgram.fragments.AccountFragment"
         android:label="AccountFragment"
         tools:layout="@layout/fragment_account"/>
+    <fragment
+        android:id="@+id/learnFragment"
+        android:name="com.itis.englishgram.fragments.LearnFragment"
+        android:label="LearnFragment"
+        tools:layout="@layout/fragment_learn">
+        <action
+            android:id="@+id/action_learnFragment_to_trainingFragment"
+            app:destination="@id/trainingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainingFragment"
+        android:name="com.itis.englishgram.fragments.TrainingFragment"
+        android:label="TrainingFragment"
+        tools:layout="@layout/fragment_training">
+        <action
+            android:id="@+id/action_trainingFragment_to_vocabularyFragment"
+            app:destination="@id/vocabularyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vocabularyFragment"
+        android:name="com.itis.englishgram.fragments.VocabularyFragment"
+        android:label="VocabularyFragment"
+        tools:layout="@layout/fragment_vocabulary">
+        <action
+            android:id="@+id/action_vocabularyFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+    </fragment>
 </navigation>

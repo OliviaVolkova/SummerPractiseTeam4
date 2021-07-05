@@ -2,28 +2,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!--<item
-        android:id="@+id/accountFragment"
+
+    <item
+        android:id="@+id/learnFragment"
         android:orderInCategory="1"
         android:title="@string/learn"
-        android:icon="@drawable/ic_baseline_login_24"
-        app:showAsAction="ifRoom" />
+        android:icon="@drawable/ic_baseline_edit_24"
+        app:showAsAction="ifRoom"/>
     <item
-        android:id="@+id/mainFragment"
-        android:orderInCategory="2"
+        android:id="@+id/trainingFragment"
+        android:orderInCategory="1"
         android:title="@string/workouts"
-        android:icon="@drawable/ic_round_home_24"
+        android:icon="@drawable/ic_baseline_work_24"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/settingsFragment"
-        android:orderInCategory="2"
-        android:icon="@drawable/ic_baseline_settings_24"
+        android:id="@+id/vocabularyFragment"
+        android:orderInCategory="1"
         android:title="@string/vocabulary"
-        app:showAsAction="ifRoom" />-->
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/accountFragment"
-        android:orderInCategory="2"
+        android:orderInCategory="1"
         android:icon="@drawable/ic_baseline_account_circle_24"
         android:title="@string/account"
         app:showAsAction="ifRoom" />
+
+
 </menu>
