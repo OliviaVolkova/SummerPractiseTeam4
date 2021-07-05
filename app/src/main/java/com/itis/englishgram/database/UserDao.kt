@@ -6,13 +6,14 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 
+
 @Dao
 interface UserDao {
 
-    @Insert(onConflict = OnConflictStrategy.FAIL)
-    suspend fun addUser(user:UserAccount)
+    @Insert(onConflict = OnConflictStrategy.ABORT)
+     fun addUser(userAccount: UserAccount)
 
     @Query("SELECT * FROM users_database ORDER BY id ASC")
-    fun readAllData(): LiveData<List<UserAccount>>
+     fun readAllData(): LiveData<List<UserAccount>>
 
 }
