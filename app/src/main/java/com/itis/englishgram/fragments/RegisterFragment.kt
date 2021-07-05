@@ -43,12 +43,12 @@ class RegisterFragment:Fragment(R.layout.fragment_register) {
         if(inputCheck(email,password)){
             val user=UserAccount(0,email,password)
             mUserViewModel.addUser(user)
-            Toast.makeText(requireContext(),"you are user now",Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(),"Successful",Toast.LENGTH_LONG).show()
 
             findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
 
         }else{
-            Toast.makeText(requireContext(),"Wrong",Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(),"Fill all empty fields",Toast.LENGTH_LONG).show()
         }
 
     }
