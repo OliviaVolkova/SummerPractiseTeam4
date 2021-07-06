@@ -18,6 +18,9 @@
     <string name="word">word</string>
     <string name="definition">definition</string>
 
+    <string name="Name">Name</string>
+    <string name="progress">progress</string>
+
 
     <string name="add_new_word">Add new word</string>
 </resources>
