@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="120dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="160dp">
+
+    <TextView
+        android:id="@+id/wordView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Word"
+        android:textSize="24pt"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/definitionView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/wordView"
+        android:layout_marginTop="10dp"
+        android:text="Definition of the word 1"
+        android:textSize="10pt"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/definitionView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/definitionView1"
+        android:layout_marginTop="10dp"
+        android:text="Definition of the word 2"
+        android:textSize="10pt"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/definitionView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/definitionView2"
+        android:layout_marginTop="10dp"
+        android:text="Definition of the word 3"
+        android:textSize="10pt"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/definitionView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/definitionView3"
+        android:layout_marginTop="10dp"
+        android:text="Definition of the word 4"
+        android:textSize="10pt"
+        tools:ignore="MissingConstraints" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
