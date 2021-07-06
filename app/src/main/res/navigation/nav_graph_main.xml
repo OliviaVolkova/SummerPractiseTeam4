@@ -36,5 +36,13 @@
         <action
             android:id="@+id/action_vocabularyFragment_to_accountFragment"
             app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_vocabularyFragment_to_addWordFragment"
+            app:destination="@id/addWordFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/addWordFragment"
+        tools:layout="@layout/fragment_add_new_word"
+        android:name="com.itis.englishgram.fragments.AddWordFragment"
+        android:label="AddWordFragment" />
 </navigation>

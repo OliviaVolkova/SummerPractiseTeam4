@@ -13,7 +13,7 @@ class BottomSingleActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //supportActionBar?.hide()
+        supportActionBar?.hide()
         setContentView(R.layout.activity_bottom_single)
         controller = (supportFragmentManager.findFragmentById(R.id.host_fragment) as NavHostFragment).navController
 
