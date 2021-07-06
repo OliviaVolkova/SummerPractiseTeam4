@@ -21,4 +21,5 @@
     <string name="add_new_word">Add new word</string>
     <string name="IKNOW">Know</string>
     <string name="TOLEARN">Learn</string>
+    <string name="SKIP">Skip</string>
 </resources>

@@ -7,7 +7,7 @@
     android:layout_marginTop="120dp"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
-    android:layout_marginBottom="200dp">
+    android:layout_marginBottom="160dp">
 
     <TextView
         android:id="@+id/wordView"
@@ -33,18 +33,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/IKNOW"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/SkipButton"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginStart="32dp"/>
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/ToLearnButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/TOLEARN"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/SkipButton"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginEnd="32dp"/>
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/SkipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SKIP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
 
 
 
