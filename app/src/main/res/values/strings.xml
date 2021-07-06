@@ -14,4 +14,11 @@
     <string name="learn">Learn</string>
     <string name="workouts">Workouts</string>
     <string name="account">Account</string>
+    <string name="Name">Тфьу</string>
+    <string name="progress">Progress</string>
+    <string name="definition">Definition of the word</string>
+    <string name="word">Word</string>
+    <string name="add_new_word">Add new word</string>
+    <string name="IKNOW">Know</string>
+    <string name="TOLEARN">Learn</string>
 </resources>
