@@ -6,6 +6,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.itis.englishgram.models.WordsLists
 
 class BottomSingleActivity : AppCompatActivity() {
 
@@ -20,6 +21,8 @@ class BottomSingleActivity : AppCompatActivity() {
         var bottomNavigationView = findViewById<BottomNavigationView>(R.id.bnv_main)
 
         bottomNavigationView.setupWithNavController(controller)
+
+        WordsLists.addExampleWords()
     }
 
     override fun onSupportNavigateUp(): Boolean = controller.navigateUp()

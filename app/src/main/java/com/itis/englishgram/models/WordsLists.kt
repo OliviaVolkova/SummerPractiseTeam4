@@ -19,7 +19,7 @@ class WordsLists {
                 unknownList.remove(word)
             }
         }
-        fun moveWordFromLearningToKnow(word: Word)
+        fun moveWordFromLearningToKnown(word: Word)
         {
             if(learningList.contains(word)) {
                 knownList.add(word)
@@ -43,6 +43,9 @@ class WordsLists {
         fun knownSize() : Int{
             return knownList.size
         }
+        fun sizesSum(): Int {
+            return unknownSize() + learningSize() + knownSize()
+        }
 
         fun takeRandomUnknown() : Word
         {
@@ -56,8 +59,7 @@ class WordsLists {
 
         fun takeRandom() : Word
         {
-            val sizesSum = unknownSize() + learningSize() + knownSize()
-            var index = random.nextInt(sizesSum)
+            var index = random.nextInt(sizesSum())
             if(index < unknownSize())
                 return unknownList[index]
             index -= unknownSize()

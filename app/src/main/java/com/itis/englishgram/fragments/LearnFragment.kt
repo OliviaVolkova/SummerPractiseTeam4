@@ -22,12 +22,12 @@ class LearnFragment : Fragment(R.layout.fragment_learn)
         wordView = view.findViewById(R.id.wordView)
         definitionView = view.findViewById(R.id.definitionView)
 
-        WordsLists.addExampleWords()
 
         takeNewWord()
     }
 
     lateinit var currentWord : Word
+    var rightDefinition : Int = 0
 
     fun takeNewWord()
     {

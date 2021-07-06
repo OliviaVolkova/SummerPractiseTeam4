@@ -22,4 +22,7 @@
     <string name="IKNOW">Know</string>
     <string name="TOLEARN">Learn</string>
     <string name="SKIP">Skip</string>
+    <string name="rightAnswer">You are right</string>
+    <string name="wrongAnswer">Wrong answer</string>
+    <string name="next">next</string>
 </resources>

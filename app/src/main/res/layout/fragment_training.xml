@@ -19,10 +19,19 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/definitionView1"
+        android:id="@+id/definitionView0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/wordView"
+        android:layout_marginTop="10dp"
+        android:text="Definition of the word 0"
+        android:textSize="10pt"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/definitionView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/definitionView0"
         android:layout_marginTop="10dp"
         android:text="Definition of the word 1"
         android:textSize="10pt"
@@ -45,15 +54,38 @@
         android:text="Definition of the word 3"
         android:textSize="10pt"
         tools:ignore="MissingConstraints" />
+
     <TextView
-        android:id="@+id/definitionView4"
+        android:id="@+id/rightAnswerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/definitionView3"
-        android:layout_marginTop="10dp"
-        android:text="Definition of the word 4"
-        android:textSize="10pt"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toTopOf="@id/NextWordButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:text="@string/rightAnswer"
+        android:textSize="20pt"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/wrongAnswerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/NextWordButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:text="@string/wrongAnswer"
+        android:textSize="20pt"
+        android:visibility="invisible"/>
+    <Button
+        android:id="@+id/NextWordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="invisible"/>
 
 
 
