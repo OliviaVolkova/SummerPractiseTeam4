@@ -17,7 +17,7 @@ import com.itis.englishgram.extensions.hideKeyboard
 
 class LoginFragment: Fragment(R.layout.fragment_login) {
 
-    private val users = hashMapOf<String, String>("test" to "12345")
+    private val users = hashMapOf<String, String>("test" to "12345", "1" to "1")
 
     private var etEmail: EditText? = null
     private var tiEmail: TextInputLayout? = null
