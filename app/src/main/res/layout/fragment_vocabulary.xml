@@ -10,15 +10,30 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_words"
-        tools:listitem="@layout/item_word"
-        tools:itemCount="6"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="128dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:itemCount="6"
+        tools:listitem="@layout/item_word">
 
     </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/add_new_word"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rv_words"
+        app:layout_constraintStart_toStartOf="@+id/rv_words"
+        app:layout_constraintTop_toBottomOf="@+id/rv_words" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
