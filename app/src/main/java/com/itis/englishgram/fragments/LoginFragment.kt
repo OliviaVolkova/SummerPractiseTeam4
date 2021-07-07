@@ -66,7 +66,7 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
             }
         }
         else {
-            Toast.makeText(requireContext(),"Fill all empty fields", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(),"Fill all empty fields please", Toast.LENGTH_LONG).show()
         }
     }
 

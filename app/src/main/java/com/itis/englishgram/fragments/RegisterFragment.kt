@@ -85,7 +85,7 @@ class RegisterFragment:Fragment(R.layout.fragment_register) {
 
 
         }else{
-            Toast.makeText(requireContext(),"Fill all empty fields",Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(),"Fill all empty fields please",Toast.LENGTH_LONG).show()
         }
 
     }
