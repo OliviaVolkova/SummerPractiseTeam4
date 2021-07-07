@@ -11,47 +11,64 @@ import com.itis.englishgram.models.WordsLists
 
 class LearnFragment : Fragment(R.layout.fragment_learn)
 {
-    lateinit var wordView : TextView
-    lateinit var definitionView : TextView
+    private lateinit var wordView : TextView
+    private lateinit var definitionView : TextView
+    private lateinit var knowButton : Button
+    private lateinit var learnButton : Button
+    private lateinit var skipButton : Button
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initListeners()
 
         wordView = view.findViewById(R.id.wordView)
         definitionView = view.findViewById(R.id.definitionView)
+        knowButton = view.findViewById<Button>(R.id.IKnowButton)
+        learnButton = view.findViewById<Button>(R.id.ToLearnButton)
+        skipButton = view.findViewById<Button>(R.id.SkipButton)
 
+        initListeners()
 
         takeNewWord()
     }
 
-    lateinit var currentWord : Word
-    var rightDefinition : Int = 0
+    private lateinit var currentWord : Word
+    private var noWords : Boolean = false
 
-    fun takeNewWord()
+    private fun takeNewWord()
     {
-        currentWord = WordsLists.takeRandomUnknown()
-        wordView.text = currentWord.spelling
-        definitionView.text = currentWord.definition
+        if(WordsLists.unknownSize()==0)
+        {
+            noWords = true
+            wordView.text = getString(R.string.out_of_words)
+            definitionView.text = getString(R.string.we_have_no_new_words)
+            knowButton.visibility = View.INVISIBLE
+            learnButton.visibility = View.INVISIBLE
+            skipButton.visibility = View.INVISIBLE
+        }
+        else
+        {
+            noWords = false
+            currentWord = WordsLists.takeRandomUnknown()
+            wordView.text = currentWord.spelling
+            definitionView.text = currentWord.definition
+        }
     }
 
-    fun initListeners()
+    private fun initListeners()
     {
-        val knowButton = view?.findViewById<Button>(R.id.IKnowButton)
-        knowButton?.setOnClickListener(){
+        knowButton.setOnClickListener(){
             WordsLists.moveFromUnknownToKnown(currentWord)
             takeNewWord()
         }
 
-        val learnButton = view?.findViewById<Button>(R.id.ToLearnButton)
-        learnButton?.setOnClickListener(){
+        learnButton.setOnClickListener(){
             WordsLists.moveWordFromUnknownToLearning(currentWord)
             takeNewWord()
         }
 
-        val skipButton = view?.findViewById<Button>(R.id.SkipButton)
-        skipButton?.setOnClickListener(){
+        skipButton.setOnClickListener(){
             takeNewWord()
         }
 

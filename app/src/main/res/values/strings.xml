@@ -25,4 +25,7 @@
     <string name="rightAnswer">You are right</string>
     <string name="wrongAnswer">Wrong answer</string>
     <string name="next">next</string>
+    <string name="empty_learning_list">You have empty learning list</string>
+    <string name="out_of_words">Out of words</string>
+    <string name="we_have_no_new_words">We have no new words for you</string>
 </resources>

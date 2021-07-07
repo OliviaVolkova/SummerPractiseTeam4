@@ -1,5 +1,7 @@
 package com.itis.englishgram.models
 
+import android.view.View
+import com.itis.englishgram.R
 import kotlin.random.Random
 
 
@@ -54,7 +56,15 @@ class WordsLists {
                 return unknownList[index]
             }
             else
-                return Word("Out of words", "We have no new words for you")
+                return Word("", "")
+        }
+        fun takeRandomLearning() : Word
+        {
+            return if(learningSize() >0) {
+                val index = random.nextInt(learningSize())
+                learningList[index]
+            } else
+                Word("", "")
         }
 
         fun takeRandom() : Word

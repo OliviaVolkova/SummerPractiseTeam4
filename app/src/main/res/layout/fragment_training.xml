@@ -16,7 +16,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="Word"
         android:textSize="24pt"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <TextView
         android:id="@+id/definitionView0"
@@ -26,7 +26,7 @@
         android:layout_marginTop="10dp"
         android:text="Definition of the word 0"
         android:textSize="10pt"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="HardcodedText,MissingConstraints" />
     <TextView
         android:id="@+id/definitionView1"
         android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
         android:layout_marginTop="10dp"
         android:text="Definition of the word 1"
         android:textSize="10pt"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="HardcodedText,MissingConstraints" />
     <TextView
         android:id="@+id/definitionView2"
         android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
         android:layout_marginTop="10dp"
         android:text="Definition of the word 2"
         android:textSize="10pt"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="HardcodedText,MissingConstraints" />
     <TextView
         android:id="@+id/definitionView3"
         android:layout_width="wrap_content"
@@ -53,7 +53,7 @@
         android:layout_marginTop="10dp"
         android:text="Definition of the word 3"
         android:textSize="10pt"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <TextView
         android:id="@+id/rightAnswerText"
