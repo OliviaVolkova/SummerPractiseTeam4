@@ -8,13 +8,12 @@ import com.itis.englishgram.models.Word
 
 class WordAdapter (
     var list: MutableList<Word> = mutableListOf<Word>()
-    ) : RecyclerView.Adapter<WordHolder>() {
+    ) : RecyclerView.Adapter<WordHolder>()
+{
         override fun onCreateViewHolder(
             parent: ViewGroup,
             viewType: Int
-        ): WordHolder = WordHolder(
-            ItemWordBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        )
+        ): WordHolder = WordHolder(ItemWordBinding.inflate(LayoutInflater.from(parent.context), parent, false))
 
         override fun onBindViewHolder(holder: WordHolder, position: Int) = holder.bind(list[position])
 
@@ -22,10 +21,10 @@ class WordAdapter (
 
     fun getItem(index: Int): Word
     {
-        return list[index];
+        return list[index]
     }
 
-    public fun AddItem(item: Word)
+    fun addItem(item: Word)
     {
         list.add(item)
     }

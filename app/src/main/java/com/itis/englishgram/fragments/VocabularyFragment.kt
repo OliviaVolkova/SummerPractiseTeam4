@@ -18,7 +18,8 @@ class VocabularyFragment : Fragment() {
     private var adapter: WordAdapter? = null
 
 
-    private var words = arrayListOf(
+    private var words = ArrayList<Word>()
+        /*arrayListOf(
         Word("wampish", "to wave about or flop to and fro"),
         Word("girandole", "a rotating and radiating firework."),
         Word("cunctation", "lateness; delay."),
@@ -44,7 +45,7 @@ class VocabularyFragment : Fragment() {
         Word("cunctation", "lateness; delay."),
         Word("shivoo", "a boisterous party or celebration."),
         Word("estivate", "to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity.to spend the summer, as at a specific place or in a certain activity."),
-    )
+    )*/
 
 
     var btnNewWord: Button? = null
@@ -61,7 +62,7 @@ class VocabularyFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnNewWord = view?.findViewById(R.id.btn_add_word)
+        btnNewWord = view.findViewById(R.id.btn_add_word)
 
         btnNewWord?.setOnClickListener {
             findNavController().navigate(R.id.action_vocabularyFragment_to_addWordFragment)
