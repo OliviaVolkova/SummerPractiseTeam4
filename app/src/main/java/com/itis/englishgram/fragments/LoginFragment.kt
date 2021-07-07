@@ -2,20 +2,25 @@ package com.itis.englishgram.fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
+import com.google.firebase.auth.FirebaseAuth
 import com.itis.englishgram.BottomSingleActivity
 import com.itis.englishgram.LoginActivity
 import com.itis.englishgram.R
 import com.itis.englishgram.extensions.hideKeyboard
 
 class LoginFragment: Fragment(R.layout.fragment_login) {
+
+    private lateinit var mAuth:FirebaseAuth
 
     private val users = hashMapOf<String, String>("test" to "12345", "1" to "1")
 
@@ -30,9 +35,49 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
         super.onViewCreated(view, savedInstanceState)
 
         findView(view)
-        initListeners()
+        mAuth= FirebaseAuth.getInstance()
+        btnLogin?.setOnClickListener{
+            loginUser()
+        }
+        btnRegister?.setOnClickListener{
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        }
+
+        //initListeners()
     }
 
+    private fun loginUser() {
+        val email=etEmail?.text.toString()
+        val password=etPassword?.text.toString()
+        if (inputCheck(email,password)){
+            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
+                task ->
+                if(task.isSuccessful){
+                    val intent = Intent(activity, BottomSingleActivity::class.java) //mb broken
+                    intent.putExtra("EXTRA_EMAIL", email)
+                    intent.putExtra("EXTRA_PASS", password)
+                    startActivity(intent)
+                }
+                else{
+                    Toast.makeText(requireContext(),"Ошибка: "+task.exception!!.message.toString()
+                        ,Toast.LENGTH_LONG)
+                        .show()
+                }
+            }
+        }
+        else {
+            Toast.makeText(requireContext(),"Fill all empty fields", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    //this fum for loginUser
+    private fun inputCheck(email:String,password:String):Boolean
+    {
+        return !(TextUtils.isEmpty(email)|| TextUtils.isEmpty(password))
+    }
+
+    // Я боюсь удалять эту функцию, так что пусть пока будет, потому что я пока сам не особо понимаю как работате бд
+    // при регистрации
     private fun initListeners()
     {
         btnLogin?.setOnClickListener{
@@ -83,6 +128,7 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
         }
     }
 
+    //это я хз нужно или нет
     private fun showMessage(message: String)
     {
         activity?.findViewById<View>(android.R.id.content)?.also {

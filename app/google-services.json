@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "568626674779",
+    "project_id": "englishgramapp",
+    "storage_bucket": "englishgramapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568626674779:android:d4880a676ca32a1851d37e",
+        "android_client_info": {
+          "package_name": "com.itis.englishgram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568626674779-vsh666dq4u33uj525r0fov7cck6t33d8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.itis.englishgram",
+            "certificate_hash": "234fe34b6c8c1d2215a5b6a910dcedbfaf0bf836"
+          }
+        },
+        {
+          "client_id": "568626674779-k8v3eqs4ffvksvcn74kmt0ln0ad8vkj6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN1vYcaj1W18dSnS8coDKumZmMiTwuWTY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568626674779-k8v3eqs4ffvksvcn74kmt0ln0ad8vkj6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
