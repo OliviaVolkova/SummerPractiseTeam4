@@ -1,7 +1,6 @@
 package com.itis.englishgram.models
 
-import android.view.View
-import com.itis.englishgram.R
+import java.lang.Exception
 import kotlin.random.Random
 
 
@@ -34,6 +33,17 @@ class WordsLists {
                 knownList.add(word)
                 unknownList.remove(word)
             }
+        }
+
+        fun getList(collection: Int) : ArrayList<Word> //капец какой unsafe. Это нельзя использовать, но мне лень чета придумывать
+        {
+            when(collection)
+            {
+                0 -> return unknownList
+                1 -> return learningList
+                2 -> return knownList
+            }
+            throw Exception("Я ЖЕ ТЕБЕ СКАЗАЛ НЕЛЬЗЯ ИСПОЛЬЗОВАТЬ ЭТО")
         }
 
         fun unknownSize(): Int{
@@ -89,10 +99,28 @@ class WordsLists {
             unknownList.addAll(words)
         }
 
+        fun addWordToLeaning(word : Word)
+        {
+            learningList.add(word)
+        }
+        fun addWordToLearning(words : ArrayList<Word>)
+        {
+            learningList.addAll(words)
+        }
+
+        fun addWordToKnown(word : Word)
+        {
+            knownList.add(word)
+        }
+        fun addWordToKnown(words : ArrayList<Word>)
+        {
+            knownList.addAll(words)
+        }
+
         fun addExampleWords()
         {
             //https://www.vocabulary.com/lists/52473
-            val words = arrayListOf<Word>(
+            val exampleWords = arrayListOf<Word>(
                 Word("chair", "a seat for one person that has a back, usually four legs, and sometimes two arms"),
                 Word("pen", "a long, thin object used for writing or drawing with ink"),
                 Word("consider", "deem to be"),
@@ -103,7 +131,7 @@ class WordsLists {
                 Word("intend", "have in mind as a purpose"),
                 Word("concern", "something that interests you because it is important")
             )
-            addWordToUnknown(words)
+            addWordToUnknown(exampleWords)
         }
     }
 }

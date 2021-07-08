@@ -2,10 +2,12 @@ package com.itis.englishgram.models
 
 import android.app.AlertDialog
 import android.content.Context
+import android.util.Log
 import com.itis.englishgram.BottomSingleActivity
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
+import java.lang.Exception
 
 
 //функции write и read принимают collection : Int
@@ -47,9 +49,18 @@ class fileWriterReader
 
         fun read(collection: Int) : String
         {
-            return FileInputStream(files[collection]).bufferedReader().use{
-                it.readText()
+            //Log.i("asdfgdfjshdfsha",collection.toString())
+            var g = ""
+            try
+            {
+                g = FileInputStream(files[collection]).bufferedReader().use {
+                    it.readText()
+                }
             }
+            catch(e : Exception){
+                Log.i("ERROR", "файл не читается. Ошибка: $e")
+            }
+            return g
         }
     }
 }

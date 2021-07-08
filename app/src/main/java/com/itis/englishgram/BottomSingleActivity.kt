@@ -8,6 +8,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.itis.englishgram.models.WordsLists
 import com.itis.englishgram.models.fileWriterReader
+import com.itis.englishgram.models.wordsInitialiser
 
 class BottomSingleActivity : AppCompatActivity() {
 
@@ -23,9 +24,21 @@ class BottomSingleActivity : AppCompatActivity() {
 
         bottomNavigationView.setupWithNavController(controller)
 
-        WordsLists.addExampleWords()
-
         fileWriterReader.init(filesDir)
+        wordsInitialiser.loadWords()
+        //WordsLists.addExampleWords()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        wordsInitialiser.saveWords()
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        wordsInitialiser.saveWords()
     }
 
     override fun onSupportNavigateUp(): Boolean = controller.navigateUp()
