@@ -12,6 +12,7 @@ import com.itis.englishgram.R
 import com.itis.englishgram.adapter.WordAdapter
 import com.itis.englishgram.databinding.FragmentVocabularyBinding
 import com.itis.englishgram.models.Word
+import com.itis.englishgram.models.WordsLists
 
 class VocabularyFragment : Fragment() {
     private var binding: FragmentVocabularyBinding? = null
@@ -78,6 +79,16 @@ class VocabularyFragment : Fragment() {
         adapter?.AddItem(Word("test", "aaaaaa"))
         adapter?.AddItem(Word("test", "aaaaaa"))*/
 
+
+        words.addAll(WordsLists.getList(0))
+        words.addAll(WordsLists.getList(1))
+        words.addAll(WordsLists.getList(2))
+        WordsLists.vocabularyWordList = words
+    }
+
+    fun addWord(word : Word)
+    {
+        words.add(word)
     }
 
     override fun onDestroyView() {

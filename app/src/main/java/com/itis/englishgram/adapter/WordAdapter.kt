@@ -28,4 +28,9 @@ class WordAdapter (
     {
         list.add(item)
     }
+
+    fun addAll(items : ArrayList<Word>)
+    {
+        list.addAll(items)
+    }
 }

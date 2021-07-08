@@ -12,6 +12,7 @@ class WordsLists {
         private val learningList = ArrayList<Word>()
         private val knownList = ArrayList<Word>()
         private val random = Random
+        lateinit var vocabularyWordList : ArrayList<Word>
 
         fun moveWordFromUnknownToLearning(word: Word)
         {
