@@ -62,12 +62,11 @@ class WordsLists {
 
         fun takeRandomUnknown() : Word
         {
-            if(unknownSize()>0) {
+            return if(unknownSize()>0) {
                 val index = random.nextInt(unknownSize())
-                return unknownList[index]
-            }
-            else
-                return Word("", "")
+                unknownList[index]
+            } else
+                Word("", "")
         }
         fun takeRandomLearning() : Word
         {
