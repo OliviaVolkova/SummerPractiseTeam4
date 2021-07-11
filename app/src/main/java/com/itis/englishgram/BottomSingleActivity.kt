@@ -1,17 +1,19 @@
 package com.itis.englishgram
 
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.itis.englishgram.models.FileWriterReader
+import com.itis.englishgram.models.WordsInitializer
 import com.itis.englishgram.models.WordsLists
-import com.itis.englishgram.models.fileWriterReader
-import com.itis.englishgram.models.wordsInitialiser
 
 class BottomSingleActivity : AppCompatActivity() {
 
+    private lateinit var prefs: SharedPreferences
     private lateinit var controller: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,21 +26,33 @@ class BottomSingleActivity : AppCompatActivity() {
 
         bottomNavigationView.setupWithNavController(controller)
 
-        fileWriterReader.init(filesDir)
-        wordsInitialiser.loadWords()
+        FileWriterReader.init(filesDir)
+        WordsInitializer.loadWords()
         //WordsLists.addExampleWords()
+        prefs = getSharedPreferences("com.itis.englishgram", MODE_PRIVATE)
     }
 
+    override fun onResume()
+    {
+        super.onResume()
+
+        if(prefs.getBoolean("firstRun",true))
+        {
+            prefs.edit().putBoolean("firstRun",false).apply()
+
+            WordsLists.addExampleWords()
+        }
+    }
     override fun onDestroy() {
         super.onDestroy()
 
-        wordsInitialiser.saveWords()
+        WordsInitializer.saveWords()
     }
 
     override fun onPause() {
         super.onPause()
 
-        wordsInitialiser.saveWords()
+        WordsInitializer.saveWords()
     }
 
     override fun onSupportNavigateUp(): Boolean = controller.navigateUp()

@@ -1,9 +1,8 @@
 package com.itis.englishgram.models
 
-import android.util.Log
 import java.lang.StringBuilder
 
-class wordsInitialiser //эта херня ломает все, если сломать файлы
+class WordsInitializer //эта херня ломает все, если сломать файлы
 {
     companion object
     {
@@ -11,13 +10,12 @@ class wordsInitialiser //эта херня ломает все, если сло�
         {
             for(i in 0..2)
             {
-                val text = fileWriterReader.read(i)
+                val text = FileWriterReader.read(i)
                 val array = text.split('\n')
                 val words = ArrayList<Word>()
                 for(j in array.indices)
                 {
                     val temp = array[j].split(';')
-                    //Log.i("aaaaaaa",array[i])
                     if(temp.size==2)
                     words.add(Word(temp[0],temp[1]))
                 }
@@ -38,7 +36,7 @@ class wordsInitialiser //эта херня ломает все, если сло�
                 val f = StringBuilder()
                 for(j in 0 until r.size)
                     f.append(r[j].spelling+";"+r[j].definition+"\n")
-                fileWriterReader.write(f.toString(),i)
+                FileWriterReader.write(f.toString(),i)
             }
         }
     }

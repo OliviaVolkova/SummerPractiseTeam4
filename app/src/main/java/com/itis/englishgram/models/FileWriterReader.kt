@@ -10,6 +10,8 @@ import java.io.FileOutputStream
 import java.lang.Exception
 
 
+//это один большой кусок говнокода. По хорошему это надо переделать, но делать этого я не буду, пока меня за это не побьют в темном переулке
+
 //функции write и read принимают collection : Int
 //collection = :
 //1. файл пишется - читается с unknown.txt
@@ -17,7 +19,7 @@ import java.lang.Exception
 //3. - known.txt
 
 
-class fileWriterReader
+class FileWriterReader
 {
     companion object
     {
@@ -49,7 +51,6 @@ class fileWriterReader
 
         fun read(collection: Int) : String
         {
-            //Log.i("asdfgdfjshdfsha",collection.toString())
             var g = ""
             try
             {
