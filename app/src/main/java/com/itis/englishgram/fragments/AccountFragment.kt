@@ -25,7 +25,7 @@ class AccountFragment: Fragment(R.layout.fragment_account) {
 
         mAuth= FirebaseAuth.getInstance()
 
-        btnFindView()
+        btnFindView(view)
         btnActivity()
     }
 
@@ -48,10 +48,9 @@ class AccountFragment: Fragment(R.layout.fragment_account) {
         }
     }
 
-    fun btnFindView(){
-
-        btnLogout=view?.findViewById(R.id.btn_log_out)
-        btnToLearn=view?.findViewById(R.id.btn_toLearn)
-        btnIKnow=view?.findViewById(R.id.btn_IKnow)
+    fun btnFindView(view:View){
+        btnLogout=view.findViewById(R.id.btn_log_out)
+        btnToLearn=view.findViewById(R.id.btn_toLearn)
+        btnIKnow=view.findViewById(R.id.btn_IKnow)
     }
 }
