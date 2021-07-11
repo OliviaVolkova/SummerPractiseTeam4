@@ -3,28 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingHorizontal="24dp"
-    android:paddingBottom="16dp"
-    android:paddingTop="36dp"
-    android:visibility="visible">
+    android:layout_height="wrap_content"
+    android:paddingTop="120dp"
+    android:paddingHorizontal="35dp"
+    android:visibility="visible"
+    app:layout_constraintTop_toTopOf="parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:maxWidth="80dp"
-            android:maxHeight="80dp"
+            android:maxWidth="90dp"
+            android:maxHeight="90dp"
             android:scaleType="centerCrop"
             android:src="@drawable/google"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@tools:sample/avatars"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:contentDescription="AVATAR"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/textView"
@@ -32,8 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="36dp"
             android:text="@string/Name"
-            android:textSize="34sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            style="@style/HeadersTextStyle"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="@+id/imageView"
             app:layout_constraintVertical_bias="0.200" />
@@ -42,44 +44,63 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/progress"
-            android:textSize="16sp"
+            android:text="Email"
+            style="@style/SecondaryTextStyle_Roboto"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.50" />
+            app:layout_constraintStart_toStartOf="@+id/textView"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="50dp"
+        android:paddingHorizontal="45dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
         <Button
-            android:id="@+id/btn_toLearn"
+            android:id="@+id/night_theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Words to study" />
+            android:text="Change theme"
+            style="@style/SecondaryTextStyle_Roboto"
+            android:stateListAnimator="@null"
+            android:background="@drawable/standard_button_style"
+            android:layout_marginTop="15dp"/>
 
         <Button
             android:id="@+id/btn_IKnow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Learned Words" />
+            android:text="Lernt words"
+            style="@style/SecondaryTextStyle_Roboto"
 
+            android:stateListAnimator="@null"
+            android:background="@drawable/standard_button_style"
+            android:layout_marginTop="15dp"/>
+
+        <Button
+            android:id="@+id/btn_toLearn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To learn"
+            style="@style/SecondaryTextStyle_Roboto"
+            android:stateListAnimator="@null"
+            android:background="@drawable/standard_button_style"
+            android:layout_marginTop="15dp"/>
+
+        <Button
+            android:id="@+id/btn_log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Log out"
+            style="@style/SecondaryTextStyle_Roboto"
+            android:stateListAnimator="@null"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/design_default_color_background"/>
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_log_out"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Log Out" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

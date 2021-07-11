@@ -5,19 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:paddingHorizontal="24dp"
-    android:paddingBottom="16dp"
-    android:paddingTop="24dp"
+    android:paddingHorizontal="35dp"
+    android:paddingTop="140dp"
     android:visibility="visible"
     >
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ti_email"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
@@ -28,13 +24,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            android:imeOptions="actionNext"/>
+            android:imeOptions="actionNext"
+            android:padding="15dp"
+            android:background="@drawable/input_text_view"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ti_password"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ti_email"
@@ -46,9 +45,10 @@
             android:hint="@string/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
             android:inputType="textPassword"
-            android:imeOptions="actionDone"/>
+            android:imeOptions="actionDone"
+            android:padding="15dp"
+            android:background="@drawable/input_text_view"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -57,10 +57,11 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="40dp"
         android:text="Register"
-        app:layout_constraintTop_toBottomOf="@+id/ti_password"
-        tools:layout_editor_absoluteX="168dp" />
+        style="@style/SecondaryTextStyle_Roboto"
+        android:background="@drawable/standard_button_style"
+        app:layout_constraintTop_toBottomOf="@+id/ti_password"/>
 
 
 

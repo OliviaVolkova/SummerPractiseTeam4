@@ -4,35 +4,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginTop="120dp"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:layout_marginBottom="160dp">
+    android:layout_marginTop="150dp"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp">
 
     <TextView
         android:id="@+id/wordView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:text="Word"
-        android:textSize="24pt"
-        tools:ignore="MissingConstraints" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/word"
+        style="@style/HeadersTextStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/stripe"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/dark"
+        app:layout_constraintTop_toBottomOf="@id/wordView"/>
 
     <TextView
         android:id="@+id/definitionView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/wordView"
         android:layout_marginTop="10dp"
         android:text="Definition of the word"
-        android:textSize="10pt"
-        tools:ignore="MissingConstraints" />
+        style="@style/SecondaryTextStyle_Rufina"
+        app:layout_constraintTop_toBottomOf="@id/stripe"/>
 
     <Button
         android:id="@+id/IKnowButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/IKNOW"
+        android:text="@string/I_know"
         app:layout_constraintBottom_toTopOf="@id/SkipButton"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="32dp"
@@ -42,7 +48,7 @@
         android:id="@+id/ToLearnButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/TOLEARN"
+        android:text="@string/to_learn"
         app:layout_constraintBottom_toTopOf="@id/SkipButton"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginEnd="32dp"
@@ -52,7 +58,7 @@
         android:id="@+id/SkipButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/SKIP"
+        android:text="@string/to_skip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>

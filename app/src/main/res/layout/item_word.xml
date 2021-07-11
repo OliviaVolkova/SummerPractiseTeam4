@@ -12,17 +12,21 @@
         android:id="@+id/tv_spelling"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/word"
-        android:textSize="20sp"
+        android:text="word"
         android:textStyle="bold"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/dark"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_definition"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:textSize="14sp"
+        android:layout_marginTop="2dp"
+        android:textSize="18dp"
+        android:textColor="@color/dark"
         android:text="@string/definition"
         app:layout_constraintStart_toStartOf="@+id/tv_spelling"
         app:layout_constraintTop_toBottomOf="@+id/tv_spelling" />
