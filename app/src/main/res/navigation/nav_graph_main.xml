@@ -9,7 +9,14 @@
         android:id="@+id/accountFragment"
         android:name="com.itis.englishgram.fragments.AccountFragment"
         android:label="AccountFragment"
-        tools:layout="@layout/fragment_account"/>
+        tools:layout="@layout/fragment_account">
+        <action
+            android:id="@+id/action_accountFragment_to_wordsWhichIKnow"
+            app:destination="@id/wordsWhichIKnow" />
+        <action
+            android:id="@+id/action_accountFragment_to_wordsToStudy"
+            app:destination="@id/wordsToStudy" />
+    </fragment>
     <fragment
         android:id="@+id/learnFragment"
         android:name="com.itis.englishgram.fragments.LearnFragment"
@@ -48,5 +55,23 @@
         <action
             android:id="@+id/action_addWordFragment_to_vocabularyFragment"
             app:destination="@id/vocabularyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordsWhichIKnow"
+        android:name="com.itis.englishgram.fragments.WordsWhichIKnow"
+        android:label="fragment_words_which__i_know"
+        tools:layout="@layout/fragment_words_which__i_know" >
+        <action
+            android:id="@+id/action_wordsWhichIKnow_to_accountFragment"
+            app:destination="@id/accountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordsToStudy"
+        android:name="com.itis.englishgram.fragments.WordsToStudy"
+        android:label="fragment_words_to_study"
+        tools:layout="@layout/fragment_words_to_study" >
+        <action
+            android:id="@+id/action_wordsToStudy_to_accountFragment"
+            app:destination="@id/accountFragment" />
     </fragment>
 </navigation>

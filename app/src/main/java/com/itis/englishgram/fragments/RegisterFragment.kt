@@ -30,23 +30,21 @@ class RegisterFragment:Fragment(R.layout.fragment_register) {
     private var tiPassword: TextInputLayout? = null
     private var btnRegister: Button? = null
 
+    //database auth
     private lateinit var mAuth:FirebaseAuth
     private lateinit var refUsers:DatabaseReference
     private var firebaseUserID: String=" "
 
 
-
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         findView1(view)
+
         mAuth= FirebaseAuth.getInstance()
 
         btnRegister?.setOnClickListener{
             createAccount()
         }
-
     }
 
     private fun createAccount() {
@@ -70,7 +68,7 @@ class RegisterFragment:Fragment(R.layout.fragment_register) {
                     refUsers.updateChildren(userHashMap).addOnCompleteListener {
                         task ->
                         if (task.isSuccessful){
-                            Toast.makeText(requireContext(),"Reg was successful",Toast.LENGTH_LONG).show()
+                            Toast.makeText(requireContext(),"Registration Successful",Toast.LENGTH_LONG).show()
                             findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
                         }
                     }
@@ -82,8 +80,6 @@ class RegisterFragment:Fragment(R.layout.fragment_register) {
                         .show()
                 }
             }
-
-
         }else{
             Toast.makeText(requireContext(),"Fill all empty fields please",Toast.LENGTH_LONG).show()
         }

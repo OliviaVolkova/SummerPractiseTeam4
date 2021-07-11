@@ -8,9 +8,9 @@ import kotlin.random.Random
 class WordsLists {
     companion object
     {
-        private val unknownList  = ArrayList<Word>()
+        public val unknownList  = ArrayList<Word>()
         private val learningList = ArrayList<Word>()
-        private val knownList = ArrayList<Word>()
+        public val knownList = ArrayList<Word>()
         private val random = Random
         lateinit var vocabularyWordList : ArrayList<Word>
 
