@@ -28,6 +28,5 @@
     <string name="empty_learning_list">You have empty learning list</string>
     <string name="out_of_words">Out of words</string>
     <string name="we_have_no_new_words">We have no new words for you</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
