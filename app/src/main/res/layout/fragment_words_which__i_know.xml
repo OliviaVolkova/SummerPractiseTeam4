@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginVertical="12dp"
+    android:layout_marginHorizontal="35dp"
+    android:layout_marginVertical="35dp"
     >
 
     <androidx.recyclerview.widget.RecyclerView
@@ -29,6 +29,7 @@
         android:layout_height="49dp"
         android:textSize="25dp"
         android:gravity="center"
+        style="@style/HeadersTextStyle"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,6 +43,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/button_style_standard"
         android:text="back"
         android:layout_marginBottom="10dp"
         />

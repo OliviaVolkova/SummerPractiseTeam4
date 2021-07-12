@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingHorizontal="16dp"
-    android:paddingVertical="12dp"
+    android:padding="5dp"
     >
 
     <TextView
@@ -13,16 +12,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/word"
-        android:textSize="20sp"
+        android:textSize="24dp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_definition"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:textSize="14sp"
+        android:layout_marginTop="3dp"
+        style="@style/SecondaryTextStyleRoboto"
         android:text="@string/definition"
         app:layout_constraintStart_toStartOf="@+id/tv_spelling"
         app:layout_constraintTop_toBottomOf="@+id/tv_spelling" />

@@ -40,7 +40,7 @@ class WordsToStudy : Fragment(R.layout.fragment_words_to_study) {
 
         words=WordsLists.unknownList
         adapter = WordAdapter(words)
-        binding?.wordsToStudy?.adapter = adapter
+        binding?.wordstostudy?.adapter = adapter
 
     }
 

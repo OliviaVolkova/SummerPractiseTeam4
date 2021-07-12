@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="12dp"
-    android:paddingVertical="16dp"
+    android:paddingTop="140dp"
+    android:paddingHorizontal="35dp"
     >
 
     <EditText
@@ -23,21 +23,20 @@
         android:id="@+id/et_definition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="10dp"
         android:hint="@string/definition"
         android:ems="10"
         app:layout_constraintTop_toBottomOf="@+id/et_spelling" />
 
     <Button
         android:id="@+id/add_word_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:text="@string/add_new_word"
-        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/SecondaryTextStyleRoboto"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_definition"
-        app:layout_constraintVertical_bias="0.0" />
+        android:background="@drawable/button_style_standard"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

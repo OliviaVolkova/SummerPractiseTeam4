@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:paddingHorizontal="24dp"
-    android:paddingBottom="16dp"
-    android:paddingTop="24dp"
+    android:paddingHorizontal="35dp"
+    android:paddingTop="140dp"
     android:visibility="visible"
     >
 
@@ -19,7 +18,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -27,8 +25,9 @@
             android:hint="@string/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="15dp"
             android:inputType="textEmailAddress"
-            android:imeOptions="actionNext"/>
+            android:imeOptions="actionNext" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -38,17 +37,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ti_email"
-        app:passwordToggleEnabled="true"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password"
             android:hint="@string/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
             android:inputType="textPassword"
-            android:imeOptions="actionDone"/>
+            android:imeOptions="actionDone" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -59,8 +58,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="36dp"
         android:text="Register"
+        style="@style/SecondaryTextStyleRoboto"
         app:layout_constraintTop_toBottomOf="@+id/ti_password"
-        tools:layout_editor_absoluteX="168dp" />
+        android:background="@drawable/button_style_standard"/>
 
 
 

@@ -140,6 +140,8 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
         }
     }
 
+
+
     private fun findView(view: View)
     {
         etEmail = view.findViewById(R.id.et_email)
