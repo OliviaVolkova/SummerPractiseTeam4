@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <color name="purple_200">#EEF1FC</color>
     <color name="purple_500">#C0D8D7</color>
     <color name="purple_700">#C6D0E6</color>
@@ -7,4 +8,13 @@
     <color name="teal_700">#CFE3F2</color>
     <color name="black">#070C0D</color>
     <color name="white">#FFFFFFFF</color>
+=======
+    <color name="aero">#D6F2F2</color>
+    <color name="maya_blue">#74BEF2</color>
+    <color name="aero_light">#D6E8F2</color>
+    <color name="green_blue_crayola">#2F8FD4</color>
+    <color name="alice_blue">#DFD3FF</color>
+    <color name="dark">#35383A</color>
+    <color name="white">#FFFFFF</color>
+>>>>>>> 397bc7b7f38b37bb79408a44f6adcb703331d38c
 </resources>

@@ -32,9 +32,9 @@ class TrainingFragment : Fragment(R.layout.fragment_training) {
             view.findViewById(R.id.definitionView2),
             view.findViewById(R.id.definitionView3)
         )
-        rightAnswerText = view.findViewById(R.id.rightAnswerText)
-        wrongAnswerText = view.findViewById(R.id.wrongAnswerText)
-        nextButton = view.findViewById(R.id.NextWordButton)
+        rightAnswerText = view.findViewById(R.id.right_answer_text)
+        wrongAnswerText = view.findViewById(R.id.wrong_answer_text)
+        nextButton = view.findViewById(R.id.new_word_button)
 
         initListeners()
 

@@ -4,13 +4,19 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< HEAD
     android:paddingTop="140dp"
     android:paddingHorizontal="35dp">
+=======
+    android:paddingHorizontal="35dp"
+    android:paddingTop="140dp">
+>>>>>>> 397bc7b7f38b37bb79408a44f6adcb703331d38c
 
     <TextView
         android:id="@+id/wordView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:gravity="center"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -72,11 +78,84 @@
         android:gravity="center"
         tools:ignore="HardcodedText,MissingConstraints"
         android:background="@drawable/button_style_standard"/>
+=======
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Word"
+        android:gravity="center"
+        style="@style/HeadersTextStyle"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <TextView
-        android:id="@+id/rightAnswerText"
-        android:layout_width="wrap_content"
+        android:id="@+id/stripe"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/dark"
+        app:layout_constraintTop_toBottomOf="@id/wordView"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/stripe">
+
+        <TextView
+            android:id="@+id/definitionView0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:gravity="center"
+            android:text="@string/definition_of_the_word_1"
+            android:textAllCaps="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/standard_button_style"
+            style="@style/SecondaryTextStyle_Roboto"/>
+
+        <TextView
+            android:id="@+id/definitionView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:gravity="center"
+            android:text="@string/definition_of_the_word_2"
+            android:textAllCaps="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/standard_button_style"
+            style="@style/SecondaryTextStyle_Roboto"/>
+
+        <TextView
+            android:id="@+id/definitionView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:gravity="center"
+            android:text="@string/definition_of_the_word_3"
+            android:textAllCaps="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/standard_button_style"
+            style="@style/SecondaryTextStyle_Roboto"/>
+
+        <TextView
+            android:id="@+id/definitionView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:gravity="center"
+            android:text="@string/definition_of_the_word_4"
+            android:textAllCaps="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/standard_button_style"
+            style="@style/SecondaryTextStyle_Roboto"/>
+
+    </LinearLayout>
+>>>>>>> 397bc7b7f38b37bb79408a44f6adcb703331d38c
+
+    <TextView
+        android:id="@+id/right_answer_text"
+        style="@style/SecondaryTextStyle_Roboto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+<<<<<<< HEAD
         app:layout_constraintBottom_toTopOf="@id/NextWordButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,10 +163,20 @@
         android:text="@string/rightAnswer"
         style="@style/SecondaryTextStyleRoboto"
         android:visibility="invisible"/>
+=======
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="@string/right_answer"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/new_word_button" />
+
+>>>>>>> 397bc7b7f38b37bb79408a44f6adcb703331d38c
     <TextView
-        android:id="@+id/wrongAnswerText"
-        android:layout_width="wrap_content"
+        android:id="@+id/wrong_answer_text"
+        style="@style/SecondaryTextStyle_Roboto"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         app:layout_constraintBottom_toTopOf="@id/NextWordButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,20 +184,33 @@
         android:text="@string/wrongAnswer"
         style="@style/SecondaryTextStyleRoboto"
         android:visibility="invisible"/>
+=======
+        android:text="@string/wrong_answer"
+        android:gravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/new_word_button"
+        android:layout_marginBottom="15dp"/>
+>>>>>>> 397bc7b7f38b37bb79408a44f6adcb703331d38c
     <Button
-        android:id="@+id/NextWordButton"
+        android:id="@+id/new_word_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
         android:text="@string/next"
         style="@style/SecondaryTextStyleRoboto"
         app:layout_constraintTop_toBottomOf="@id/definitionView3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         android:layout_marginTop="100dp"
         android:background="@drawable/button_style_standard"
         android:visibility="visible"/>
-
-
+=======
+        android:background="@drawable/standard_button_style"
+        style="@style/SecondaryTextStyle_Roboto"
+        android:stateListAnimator="@null"
+        android:visibility="invisible"/>
+>>>>>>> 397bc7b7f38b37bb79408a44f6adcb703331d38c
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,18 +11,33 @@
         android:id="@+id/tv_spelling"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="@string/word"
         android:textSize="24dp"
         android:textStyle="bold"
         android:textColor="@color/black"
+=======
+        android:text="word"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/dark"
+>>>>>>> 397bc7b7f38b37bb79408a44f6adcb703331d38c
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_definition"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="3dp"
         style="@style/SecondaryTextStyleRoboto"
+=======
+        android:layout_marginTop="2dp"
+        android:textSize="18dp"
+        android:textColor="@color/dark"
+>>>>>>> 397bc7b7f38b37bb79408a44f6adcb703331d38c
         android:text="@string/definition"
         app:layout_constraintStart_toStartOf="@+id/tv_spelling"
         app:layout_constraintTop_toBottomOf="@+id/tv_spelling" />

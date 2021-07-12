@@ -14,19 +14,27 @@
     <string name="learn">Learn</string>
     <string name="workouts">Workouts</string>
     <string name="account">Account</string>
+<<<<<<< HEAD
     <string name="Name">Имя</string>
+=======
+    <string name="Name">Name</string>
+>>>>>>> 397bc7b7f38b37bb79408a44f6adcb703331d38c
     <string name="progress">Progress</string>
     <string name="definition">Definition of the word</string>
     <string name="word">Word</string>
     <string name="add_new_word">Add new word</string>
-    <string name="IKNOW">Know</string>
-    <string name="TOLEARN">Learn</string>
-    <string name="SKIP">Skip</string>
-    <string name="rightAnswer">You are right</string>
-    <string name="wrongAnswer">Wrong answer</string>
+    <string name="I_know">Know</string>
+    <string name="to_learn">Learn</string>
+    <string name="to_skip">Skip</string>
+    <string name="right_answer">You are right</string>
+    <string name="wrong_answer">Wrong answer</string>
     <string name="next">next</string>
     <string name="empty_learning_list">You have empty learning list</string>
     <string name="out_of_words">Out of words</string>
     <string name="we_have_no_new_words">We have no new words for you</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="definition_of_the_word_2">Definition of the word 2</string>
+    <string name="definition_of_the_word_1">Definition of the word 1</string>
+    <string name="definition_of_the_word_4">Definition of the word 4</string>
+    <string name="definition_of_the_word_3">Definition of the word 3</string>
 </resources>
